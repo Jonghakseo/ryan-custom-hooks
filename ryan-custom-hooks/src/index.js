@@ -4,4 +4,4 @@ import useMountFocus from './useMountFocus';
 const hooks = { useToggle, useMountFocus }
 
 
-export default hooks
+export default {...hooks}
