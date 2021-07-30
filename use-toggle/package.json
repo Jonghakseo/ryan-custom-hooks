@@ -1,0 +1,38 @@
+{
+  "name": "use-toggle",
+  "version": "1.0.1",
+  "description": "A starter for creating a new React hook",
+  "author": {
+    "name": "Ryan",
+    "email": "hello@colbyfayock.com",
+    "url": "https://twitter.com/colbyfayock"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "bump": "npm version",
+    "example": "cd example && yarn install && yarn package",
+    "prepublishOnly": "yarn build",
+    "watch": "nodemon --watch src --exec \"yarn build\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/preset-react": "^7.12.13",
+    "nodemon": "^2.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colbyfayock/use-toggle"
+  },
+  "bugs": {
+    "url": "https://github.com/colbyfayock/use-toggle/issues"
+  }
+}

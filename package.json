@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "workspaces": [
+    "example",
+    "use-toggle"
+  ],
+  "scripts": {
+    "build": "yarn build:hook && yarn build:example",
+    "build:example": "yarn workspace example package",
+    "build:hook": "yarn workspace use-toggle build",
+    "bump": "yarn workspace use-toggle bump",
+    "develop": "yarn watch",
+    "watch": "concurrently -n Hook,Example \"yarn watch:hook\" \"yarn watch:example\"",
+    "watch:example": "yarn workspace example develop",
+    "watch:hook": "yarn workspace use-toggle watch",
+    "setup": "node ./scripts/setup.js"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "license": "MIT"
+}
