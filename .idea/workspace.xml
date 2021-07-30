@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="268ab788-1873-442c-bb2f-695addd99c6f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/useMountFocus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/useToggle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-toggle/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-toggle/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-toggle/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-toggle/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-toggle/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/use-toggle/src/useToggle.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1w16pgSjteXoZRf3HLjcSX5Byn8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ryan-custom-hook/src" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ryan-custom-hook/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="268ab788-1873-442c-bb2f-695addd99c6f" name="Default Changelist" comment="" />
+      <created>1627613932212</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627613932212</updated>
+      <workItem from="1627613933327" duration="4106000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2534" height="386" key="GridCell.Tab.0.bottom" timestamp="1627614066802">
+      <screen x="2574" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2534" height="386" key="GridCell.Tab.0.bottom/1934.1463.1440.804/2574.23.2560.1417/0.23.2560.1417@2574.23.2560.1417" timestamp="1627614066802" />
+    <state width="2534" height="386" key="GridCell.Tab.0.center" timestamp="1627614066801">
+      <screen x="2574" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2534" height="386" key="GridCell.Tab.0.center/1934.1463.1440.804/2574.23.2560.1417/0.23.2560.1417@2574.23.2560.1417" timestamp="1627614066801" />
+    <state width="2534" height="386" key="GridCell.Tab.0.left" timestamp="1627614066801">
+      <screen x="2574" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2534" height="386" key="GridCell.Tab.0.left/1934.1463.1440.804/2574.23.2560.1417/0.23.2560.1417@2574.23.2560.1417" timestamp="1627614066801" />
+    <state width="2534" height="386" key="GridCell.Tab.0.right" timestamp="1627614066802">
+      <screen x="2574" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2534" height="386" key="GridCell.Tab.0.right/1934.1463.1440.804/2574.23.2560.1417/0.23.2560.1417@2574.23.2560.1417" timestamp="1627614066802" />
+    <state x="3489" y="435" width="730" height="592" key="find.popup" timestamp="1627616520625">
+      <screen x="2574" y="23" width="2560" height="1417" />
+    </state>
+    <state x="3489" y="435" width="730" height="592" key="find.popup/1934.1463.1440.804/2574.23.2560.1417/0.23.2560.1417@2574.23.2560.1417" timestamp="1627616520625" />
+  </component>
+</project>

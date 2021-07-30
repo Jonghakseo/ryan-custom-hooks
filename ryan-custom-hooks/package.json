@@ -1,11 +1,11 @@
 {
-  "name": "use-toggle",
+  "name": "ryan-custom-hooks",
   "version": "1.0.1",
-  "description": "A starter for creating a new React hook",
+  "description": "react custom hook made by Ryan",
   "author": {
     "name": "Ryan",
-    "email": "hello@colbyfayock.com",
-    "url": "https://twitter.com/colbyfayock"
+    "email": "unqocn@gmail.com",
+    "url": "https://nookpi.tistory.com/"
   },
   "keywords": [
     "react",
@@ -21,6 +21,9 @@
     "watch": "nodemon --watch src --exec \"yarn build\""
   },
   "license": "MIT",
+  "dependencies": {
+    "react": "^16.12.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.16",
@@ -30,9 +33,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/use-toggle"
+    "url": "https://github.com/Jonghakseo/ryan-custom-hooks"
   },
   "bugs": {
-    "url": "https://github.com/colbyfayock/use-toggle/issues"
+    "url": "https://github.com/Jonghakseo/ryan-custom-hooks/issues"
   }
 }

@@ -2,17 +2,17 @@
   "private": true,
   "workspaces": [
     "example",
-    "use-toggle"
+    "ryan-custom-hooks"
   ],
   "scripts": {
     "build": "yarn build:hook && yarn build:example",
     "build:example": "yarn workspace example package",
-    "build:hook": "yarn workspace use-toggle build",
-    "bump": "yarn workspace use-toggle bump",
+    "build:hook": "yarn workspace ryan-custom-hooks build",
+    "bump": "yarn workspace ryan-custom-hooks bump",
     "develop": "yarn watch",
     "watch": "concurrently -n Hook,Example \"yarn watch:hook\" \"yarn watch:example\"",
     "watch:example": "yarn workspace example develop",
-    "watch:hook": "yarn workspace use-toggle watch",
+    "watch:hook": "yarn workspace ryan-custom-hooks watch",
     "setup": "node ./scripts/setup.js"
   },
   "devDependencies": {

@@ -1,8 +1,7 @@
-import { useToggle } from '../../use-toggle';
-
 import { toCamel } from '../lib/util';
 
-import hookConfig from '../../use-toggle/package.json';
+import hookConfig from '../../ryan-custom-hooks/package.json';
+import { useMountFocus, useToggle } from "../../ryan-custom-hooks/src/index";
 
 export default function Index() {
   const { name, description, repository = {}, author = {} } = hookConfig;
@@ -14,11 +13,9 @@ export default function Index() {
 
   const repositoryUrlDisplay = repositoryExists && repositoryUrl.split('://')[1];
 
-  const hookSettings = {
-    message: 'Hello, custom hook!'
-  }
+  useMountFocus("input")
+  const [ isBlack, toggleWB ] = useToggle(true)
 
-  const { message } = useToggle(hookSettings);
 
   return (
     <main>
@@ -84,31 +81,46 @@ export default function Index() {
 
         <h2>How to use</h2>
 
+        <h3>
+          useToggle
+        </h3>
+
         <p>
-          Add your instructions here!
+          simple state management of "true" / "false"
         </p>
 
-        <h2>Examples</h2>
-
-        <h3>Set and grab message</h3>
-        <p>
-          <strong>Input:</strong>
-        </p>
+        <h4>Examples</h4>
         <pre>
           <code>
-{`const hookSettings = {
-  message: 'Hello, custom hook!'
-}
+{`const defalutValue = true; // optional
 
-const { message } = useToggle(hookSettings);`}
+const [ isRyan, toggleRyan, setRyan ] = useToggle(defalutValue);
+
+toggleRyan // === setRyan((prev) => !prev)
+`}
           </code>
         </pre>
+        <br/>
+        <h3>
+          useMountFocus
+        </h3>
         <p>
-          <strong>Output:</strong>
+          element auto focus when components mounted
         </p>
-        <p>
-          { message }
-        </p>
+
+        <h4>Examples</h4>
+        <pre>
+          <code>
+{`const targetRef = useRef(null)
+
+// input targetId:string or ref:React.MutableRefObject
+useMountFocus("target"); // or targetRef
+
+return <input id="target" ref={targetRef}/>
+`}
+          </code>
+        </pre>
+
       </section>
 
       <footer>
