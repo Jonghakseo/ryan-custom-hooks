@@ -49,7 +49,7 @@ export default function useFocusBlur (refOrId, defaultFocusState = false) {
         return function () {
             document.removeEventListener("click", handleBlur, false);
 
-            if (elementCurrent.hasOwnProperty('childNodes')) {
+            if (elementCurrent && elementCurrent.hasOwnProperty('childNodes')) {
                 const childrenNodes = elementCurrent.childNodes;
                 childrenNodes.forEach((divChildren) => {
                     divChildren.removeEventListener("focus", focusSetFocus);

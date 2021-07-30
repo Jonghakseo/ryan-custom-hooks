@@ -25,7 +25,7 @@ Can be used with typescript.
 - `[1.0.6]` add types: useToggle, useMountFocus 
 - `[1.0.7]` add example: useToggle, useMountFocus 
 - `[1.0.8]` add hook : useFocusBlur(with Type, example)
-- `[1.0.9]` fix hook : useFocusBlur null point error
+- `[1.0.10]` fix hook : useFocusBlur null point error
 
 ---
 ### Thanks
