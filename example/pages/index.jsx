@@ -2,7 +2,7 @@ import { toCamel } from '../lib/util';
 import hookConfig from '../../ryan-custom-hooks/package.json';
 import useToggle from "../../ryan-custom-hooks/src/useToggle";
 import useMountFocus from "../../ryan-custom-hooks/src/useMountFocus";
-import {useEffect} from "react";
+import useFocusBlur from "../../ryan-custom-hooks/src/useFocusBlur";
 
 export default function Index() {
   const { name, description, repository = {}, author = {} } = hookConfig;
@@ -16,6 +16,7 @@ export default function Index() {
 
   const [ isOn, toggleOnOff, setToggle ] = useToggle(true)
   useMountFocus("target_input")
+  const isFocused = useFocusBlur("focus_area")
 
   return (
     <main>
@@ -86,7 +87,7 @@ export default function Index() {
         </h3>
 
         <p>
-          simple state management of "true" / "false"
+          Simple state management of "true" / "false"
         </p>
 
         <p>toggle is {isOn ? "ON" : "OFF"}</p>
@@ -113,7 +114,7 @@ export default function Index() {
           useMountFocus
         </h3>
         <p>
-          element auto focus when components mounted
+          Element auto focus when components mounted
         </p>
         <input id="target_input" />
 
@@ -126,6 +127,27 @@ export default function Index() {
 useMountFocus("target_input") // or targetRef
 
 <input id="target_input" /> // or <input ref={targetRef}/>
+`}
+          </code>
+        </pre>
+        <br/>
+        <h3>
+          useFocusBlur
+        </h3>
+        <p>
+          Determine if a reference is in focus or blur
+        </p>
+        <input value={isFocused ? "Focus" : "Blur"}/>
+        <div style={{ background:"grey" }} id={"focus_area"}>focus area</div>
+        <h4>Examples</h4>
+        <pre>
+          <code>
+{`const isFocused = useFocusBlur("focus_area")
+
+// INPUT (targetId:string or ref:React.MutableRefObject)
+useFocusBlur("focus_area") // or targetRef
+
+<div id="focus_area" /> // or Any DOM Element 
 `}
           </code>
         </pre>
