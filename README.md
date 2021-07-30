@@ -15,7 +15,7 @@ example
 
 ##History
 
-- [2021.07.30] `1.0.1`  `add hook : useToggle, useMountFocus`
-
+- `[1.0.1]` add hook : useToggle, useMountFocus
+- `[1.0.6]` add types: useToggle, useMountFocus 
 
 #### This Package Is Based On colbyfayock's Template. Thanks colby!
