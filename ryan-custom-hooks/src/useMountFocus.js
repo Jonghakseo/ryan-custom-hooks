@@ -6,7 +6,9 @@ export default function useMountFocus (refOrId = "") {
       return setTimeout(() => {
         if (typeof refOrId === "string") {
           const target = document.getElementById(refOrId);
-          target?.focus();
+          if (target){
+            target.focus();
+          }
         } else if (refOrId.current) {
           refOrId.current.focus();
         }

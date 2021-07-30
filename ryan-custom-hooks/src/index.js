@@ -1,4 +1,7 @@
 import useToggle from './useToggle';
 import useMountFocus from './useMountFocus';
 
-export default {useToggle, useMountFocus}
+const hooks = { useToggle, useMountFocus }
+
+
+export default hooks

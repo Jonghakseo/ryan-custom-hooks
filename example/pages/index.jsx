@@ -1,7 +1,8 @@
 import { toCamel } from '../lib/util';
-
 import hookConfig from '../../ryan-custom-hooks/package.json';
-import { useMountFocus, useToggle } from "../../ryan-custom-hooks/src/index";
+import useToggle from "../../ryan-custom-hooks/src/useToggle";
+import useMountFocus from "../../ryan-custom-hooks/src/useMountFocus";
+import {useEffect} from "react";
 
 export default function Index() {
   const { name, description, repository = {}, author = {} } = hookConfig;
@@ -13,9 +14,8 @@ export default function Index() {
 
   const repositoryUrlDisplay = repositoryExists && repositoryUrl.split('://')[1];
 
-  useMountFocus("input")
-  const [ isBlack, toggleWB ] = useToggle(true)
-
+  const [ isOn, toggleOnOff, setToggle ] = useToggle(true)
+  useMountFocus("target_input")
 
   return (
     <main>
@@ -89,14 +89,22 @@ export default function Index() {
           simple state management of "true" / "false"
         </p>
 
+        <p>toggle is {isOn ? "ON" : "OFF"}</p>
+        <button onClick={toggleOnOff}>toggle</button>
+        <button onClick={()=>setToggle(true)}>toggle on</button>
+        <button onClick={()=>setToggle(false)}>toggle off</button>
+
         <h4>Examples</h4>
         <pre>
           <code>
-{`const defalutValue = true; // optional
+{`const [ isOn, toggleOnOff, setToggle ] = useToggle(true)
+// initial value is optional. default = false
 
-const [ isRyan, toggleRyan, setRyan ] = useToggle(defalutValue);
+<p>toggle is {isOn ? "ON" : "OFF"}</p>
 
-toggleRyan // === setRyan((prev) => !prev)
+<button onClick={toggleOnOff}>toggle</button>
+<button onClick={()=>setToggle(true)}>toggle on</button>
+<button onClick={()=>setToggle(false)}>toggle off</button>
 `}
           </code>
         </pre>
@@ -107,16 +115,17 @@ toggleRyan // === setRyan((prev) => !prev)
         <p>
           element auto focus when components mounted
         </p>
+        <input id="target_input" />
 
         <h4>Examples</h4>
         <pre>
           <code>
 {`const targetRef = useRef(null)
 
-// input targetId:string or ref:React.MutableRefObject
-useMountFocus("target"); // or targetRef
+// INPUT (targetId:string or ref:React.MutableRefObject)
+useMountFocus("target_input") // or targetRef
 
-return <input id="target" ref={targetRef}/>
+<input id="target_input" /> // or <input ref={targetRef}/>
 `}
           </code>
         </pre>

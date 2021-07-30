@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="268ab788-1873-442c-bb2f-695addd99c6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/useMountFocus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/useToggle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-toggle/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-toggle/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-toggle/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-toggle/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-toggle/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/use-toggle/src/useToggle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-custom-hooks/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-custom-hooks/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-custom-hooks/src/useMountFocus.js" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/useMountFocus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-custom-hooks/src/useToggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-custom-hooks/src/useToggle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +40,16 @@
       <recent name="$PROJECT_DIR$/ryan-custom-hook/src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ryan-custom-hook/example/out/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1627613932212</updated>
       <workItem from="1627613933327" duration="4106000" />
+      <workItem from="1627626800550" duration="2093000" />
     </task>
     <servers />
   </component>
@@ -78,6 +83,10 @@
       <screen x="2574" y="23" width="2560" height="1417" />
     </state>
     <state width="2534" height="386" key="GridCell.Tab.0.right/1934.1463.1440.804/2574.23.2560.1417/0.23.2560.1417@2574.23.2560.1417" timestamp="1627614066802" />
+    <state x="946" y="239" width="1568" height="1217" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1627627129211">
+      <screen x="0" y="23" width="2488" height="1417" />
+    </state>
+    <state x="946" y="239" width="1568" height="1217" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1934.1463.1440.877/2574.23.2560.1417/0.23.2488.1417@2574.23.2560.1417" timestamp="1627627129211" />
     <state x="3489" y="435" width="730" height="592" key="find.popup" timestamp="1627616520625">
       <screen x="2574" y="23" width="2560" height="1417" />
     </state>
