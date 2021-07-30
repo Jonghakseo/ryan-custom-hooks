@@ -5,9 +5,12 @@ export default function useFocusBlur (refOrId, defaultFocusState = false) {
 
     useEffect(() => {
         let elementCurrent;
-        if (typeof refOrId === "string"){
+        if (!refOrId ){
+            elementCurrent = null
+        }else if(typeof refOrId === "string"){
             elementCurrent = document.getElementById(refOrId);
-        }else if(refOrId.hasOwnProperty('current')){
+        }
+        else if(refOrId.hasOwnProperty('current')){
             elementCurrent = refOrId.current;
         }
 
@@ -33,7 +36,7 @@ export default function useFocusBlur (refOrId, defaultFocusState = false) {
         }
 
 
-        if (elementCurrent.hasOwnProperty('childNodes')) {
+        if (elementCurrent && elementCurrent.hasOwnProperty('childNodes')) {
             const childrenNodes = elementCurrent.childNodes;
             childrenNodes.forEach((divChildren) => {
                 divChildren.addEventListener("focus", focusSetFocus);
