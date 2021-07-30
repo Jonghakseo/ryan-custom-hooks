@@ -13,7 +13,7 @@ A simple React Hooks made by Ryan.
 [Example](https://codesandbox.io/s/usemountfocusexample-wynuh?file=/src/App.js)
 
 
-##History
+## History
 
 - `[1.0.1]` add hook : useToggle, useMountFocus
 - `[1.0.6]` add types: useToggle, useMountFocus 
