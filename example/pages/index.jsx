@@ -3,6 +3,8 @@ import hookConfig from '../../ryan-custom-hooks/package.json';
 import useToggle from "../../ryan-custom-hooks/src/useToggle";
 import useMountFocus from "../../ryan-custom-hooks/src/useMountFocus";
 import useFocusBlur from "../../ryan-custom-hooks/src/useFocusBlur";
+import useDidMount from "../../ryan-custom-hooks/src/useDidMount";
+import useScrollIntoView from "../../ryan-custom-hooks/src/useScrollIntoView";
 
 export default function Index() {
   const { name, description, repository = {}, author = {} } = hookConfig;
@@ -15,8 +17,16 @@ export default function Index() {
   const repositoryUrlDisplay = repositoryExists && repositoryUrl.split('://')[1];
 
   const [ isOn, toggleOnOff, setToggle ] = useToggle(true)
+
   useMountFocus("target_input")
+
   const isFocused = useFocusBlur("focus_area")
+
+  useDidMount(()=>{
+    document.body.style.background = '#cbc5c5'
+  })
+
+  const { scrollYIntoView, scrollXIntoView } = useScrollIntoView()
 
   return (
     <main>
@@ -137,7 +147,7 @@ useMountFocus("target_input") // or targetRef
         <p>
           Determine if a reference is in focus or blur
         </p>
-        <input value={isFocused ? "Focus" : "Blur"}/>
+        <span>{isFocused ? "Focus" : "Blur"}</span>
         <div style={{ background:"grey" }} id={"focus_area"}>focus area</div>
         <h4>Examples</h4>
         <pre>
@@ -148,6 +158,71 @@ useMountFocus("target_input") // or targetRef
 useFocusBlur("focus_area") // or targetRef
 
 <div id="focus_area" /> // or Any DOM Element 
+`}
+          </code>
+        </pre>
+        <br/>
+        <h3>
+          useDidMount
+        </h3>
+        <p>
+          Callback function that works at the same time as the mount
+        </p>
+        {/*<div style={{ background:"grey" }} id={"focus_area"}>focus area</div>*/}
+        <h4>Examples</h4>
+        <pre>
+          <code>
+{`useDidMount(()=>{
+    document.body.style.background = '#cbc5c5'
+})
+`}
+          </code>
+        </pre>
+        <br/>
+        <h3>
+          useScrollIntoView
+        </h3>
+        <p>
+          Automatic scrolling to the position of an element within a view
+        </p>
+        {/*<div style={{ background:"grey" }} id={"focus_area"}>focus area</div>*/}
+        <h4>Examples</h4>
+
+        <button onClick={()=>scrollXIntoView("target_x")}>Scroll X into View</button>
+        <button onClick={()=>scrollYIntoView("target_y")}>Scroll Y into View</button>
+        <div style={{width:'300px', height:"300px", background:"white", overflow:"auto", display:"flex"}}>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"green"}} id={"target_x"}>target_x</div>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>
+        </div>
+        <div style={{width:'300px', height:"300px", background:"white", overflow:"auto", display:"block"}}>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}} id={"target_y"}>target_y</div>
+          <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>
+        </div>
+        <pre>
+          <code>
+{`const { scrollYIntoView } = useScrollIntoView()
+
+// INPUT (targetId:string or ref:React.MutableRefObject)
+<button onClick={() => scrollYIntoView("target_x")}>Scroll X into View</button>
+
+<Container>
+    <Item/>
+    <Item/>
+    <Item>target_x</Item>
+    <Item/>
+</Container>
 `}
           </code>
         </pre>

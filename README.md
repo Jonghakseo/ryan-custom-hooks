@@ -18,6 +18,14 @@ Can be used with typescript.
 
 [Example](https://codesandbox.io/s/usefocusblurexample-9cpjd?file=/src/App.js)
 
+### useDidMount
+
+[Example]
+
+### useScrollIntoView
+
+[Example]
+
 ---
 ## History
 
@@ -26,6 +34,7 @@ Can be used with typescript.
 - `[1.0.7]` add example: useToggle, useMountFocus 
 - `[1.0.8]` add hook : useFocusBlur(with Type, example)
 - `[1.0.10]` fix hook : useFocusBlur null point error
+- `[1.1.0]` add hook : useDidMount, useScrollIntoView
 
 ---
 ### Thanks
