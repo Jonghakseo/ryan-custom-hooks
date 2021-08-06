@@ -14,7 +14,7 @@
     "watch:example": "yarn workspace example develop",
     "watch:hook": "yarn workspace ryan-custom-hooks watch",
     "setup": "node ./scripts/setup.js",
-    "deploy-ready" : "yarn build && cp README.md ryan-custom-hooks/README.md && cp -r example/out ryan-custom-hooks/example"
+    "deploy-ready" : "yarn build && cp README.md ryan-custom-hooks/README.md"
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
