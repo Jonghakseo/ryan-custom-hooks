@@ -20,11 +20,12 @@ Can be used with typescript.
 
 ### useDidMount
 
-[Example]
+[Example](https://codesandbox.io/s/usedidmount-example-1zwew?file=/src/App.js)
+
 
 ### useScrollIntoView
 
-[Example]
+[Example](https://codesandbox.io/s/usescrollintoview-example-forked-1zwew)
 
 ---
 ## History
@@ -35,6 +36,7 @@ Can be used with typescript.
 - `[1.0.8]` add hook : useFocusBlur(with Type, example)
 - `[1.0.10]` fix hook : useFocusBlur null point error
 - `[1.1.0]` add hook : useDidMount, useScrollIntoView
+- `[1.1.2]` add example : useDidMount, useScrollIntoView
 
 ---
 ### Thanks
