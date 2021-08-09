@@ -25,7 +25,7 @@ Can be used with typescript.
 
 ### useScrollIntoView
 
-[Example](https://codesandbox.io/s/usescrollintoview-example-forked-1zwew)
+[Example](https://codesandbox.io/s/usescrollintoview-example-s0650?file=/src/App.js)
 
 ---
 ## History
