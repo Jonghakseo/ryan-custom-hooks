@@ -7,9 +7,12 @@ export default function useToggle(
       defaultValue === undefined ? false : defaultValue
   );
 
-  const handleToggle = () => {
+  function handleToggle(){
     setToggleValue((t) => !t);
-  };
+  }
 
-  return [toggleValue, handleToggle, setToggleValue];
+  handleToggle.on = ()=> setToggleValue(true)
+  handleToggle.off = ()=> setToggleValue(false)
+
+  return [toggleValue, handleToggle];
 }

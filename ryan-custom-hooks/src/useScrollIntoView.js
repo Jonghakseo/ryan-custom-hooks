@@ -1,4 +1,4 @@
-function useScrollIntoView(scrollDelay = 300) {
+function useScrollIntoView(scrollDelay = 0) {
 
   const scrollYIntoView = (
       refOrId

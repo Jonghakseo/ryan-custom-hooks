@@ -5,6 +5,8 @@ import useMountFocus from "../../ryan-custom-hooks/src/useMountFocus";
 import useFocusBlur from "../../ryan-custom-hooks/src/useFocusBlur";
 import useDidMount from "../../ryan-custom-hooks/src/useDidMount";
 import useScrollIntoView from "../../ryan-custom-hooks/src/useScrollIntoView";
+import useLocalstorage from "../../ryan-custom-hooks/src/useLocalStorage";
+import useStepHandler from "../../ryan-custom-hooks/src/useStepHandler";
 
 export default function Index() {
   const { name, description, repository = {}, author = {} } = hookConfig;
@@ -16,7 +18,7 @@ export default function Index() {
 
   const repositoryUrlDisplay = repositoryExists && repositoryUrl.split('://')[1];
 
-  const [ isOn, toggleOnOff, setToggle ] = useToggle(true)
+  const [ isOn, toggle ] = useToggle(true);
 
   useMountFocus("target_input")
 
@@ -28,6 +30,16 @@ export default function Index() {
 
   const { scrollYIntoView, scrollXIntoView } = useScrollIntoView()
 
+  const [key, setKey, remove] = useLocalstorage("data_sample",10)
+
+  const steps = [
+    {key: 1, value: <div>1</div>},
+    {key: 2, value: <div>2</div>},
+    {key: 3, value: <div>3</div>}
+  ]
+
+  const [handler, render] = useStepHandler(steps, 1)
+  console.log(handler.now,render())
   return (
     <main>
       <style jsx global>{`
@@ -79,7 +91,6 @@ export default function Index() {
       <section>
 
         <h1>{ toCamel(name) }</h1>
-
         <p>{ description }</p>
 
         { repositoryExists && (
@@ -100,22 +111,22 @@ export default function Index() {
           Simple state management of "true" / "false"
         </p>
 
-        <p>toggle is {isOn ? "ON" : "OFF"}</p>
-        <button onClick={toggleOnOff}>toggle</button>
-        <button onClick={()=>setToggle(true)}>toggle on</button>
-        <button onClick={()=>setToggle(false)}>toggle off</button>
+        {/*<p>toggle is {isOn ? "ON" : "OFF"}</p>*/}
+        {/*<button onClick={toggle}>toggle</button>*/}
+        {/*<button onClick={toggle.on}>toggle on</button>*/}
+        {/*<button onClick={toggle.off}>toggle off</button>*/}
 
         <h4>Examples</h4>
         <pre>
           <code>
-{`const [ isOn, toggleOnOff, setToggle ] = useToggle(true)
+{`const [ isOn, toggle ] = useToggle(true)
 // initial value is optional. default = false
 
 <p>toggle is {isOn ? "ON" : "OFF"}</p>
 
-<button onClick={toggleOnOff}>toggle</button>
-<button onClick={()=>setToggle(true)}>toggle on</button>
-<button onClick={()=>setToggle(false)}>toggle off</button>
+<button onClick={toggle}>toggle</button>
+<button onClick={toggle.on}>toggle on</button>
+<button onClick={toggle.off}>toggle off</button>
 `}
           </code>
         </pre>
@@ -126,7 +137,7 @@ export default function Index() {
         <p>
           Element auto focus when components mounted
         </p>
-        <input id="target_input" />
+        {/*<input id="target_input" />*/}
 
         <h4>Examples</h4>
         <pre>
@@ -147,8 +158,8 @@ useMountFocus("target_input") // or targetRef
         <p>
           Determine if a reference is in focus or blur
         </p>
-        <span>{isFocused ? "Focus" : "Blur"}</span>
-        <div style={{ background:"grey" }} id={"focus_area"}>focus area</div>
+        {/*<span>{isFocused ? "Focus" : "Blur"}</span>*/}
+        {/*<div style={{ background:"grey" }} id={"focus_area"}>focus area</div>*/}
         <h4>Examples</h4>
         <pre>
           <code>
@@ -188,28 +199,28 @@ useFocusBlur("focus_area") // or targetRef
         {/*<div style={{ background:"grey" }} id={"focus_area"}>focus area</div>*/}
         <h4>Examples</h4>
 
-        <button onClick={()=>scrollXIntoView("target_x")}>Scroll X into View</button>
-        <button onClick={()=>scrollYIntoView("target_y")}>Scroll Y into View</button>
-        <div style={{width:'300px', height:"300px", background:"white", overflow:"auto", display:"flex"}}>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"green"}} id={"target_x"}>target_x</div>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>
-        </div>
-        <div style={{width:'300px', height:"300px", background:"white", overflow:"auto", display:"block"}}>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}} id={"target_y"}>target_y</div>
-          <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>
-        </div>
+        {/*<button onClick={()=>scrollXIntoView("target_x")}>Scroll X into View</button>*/}
+        {/*<button onClick={()=>scrollYIntoView("target_y")}>Scroll Y into View</button>*/}
+        {/*<div style={{width:'300px', height:"300px", background:"white", overflow:"auto", display:"flex"}}>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"green"}} id={"target_x"}>target_x</div>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>*/}
+        {/*</div>*/}
+        {/*<div style={{width:'300px', height:"300px", background:"white", overflow:"auto", display:"block"}}>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"red"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"green"}}/>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"blue"}} id={"target_y"}>target_y</div>*/}
+        {/*  <div style={{minWidth:'200px', minHeight:"200px", background:"orange"}}/>*/}
+        {/*</div>*/}
         <pre>
           <code>
 {`const { scrollYIntoView } = useScrollIntoView()
@@ -226,9 +237,39 @@ useFocusBlur("focus_area") // or targetRef
 `}
           </code>
         </pre>
+        <br/>
+        <h3>
+          useLocalStorage
+        </h3>
+        <p>
+         Hook to manage local storage items
+        </p>
+        {/*<span>{isFocused ? "Focus" : "Blur"}</span>*/}
+        {/*<div style={{ background:"grey" }} id={"focus_area"}>focus area</div>*/}
+        <h4>Examples</h4>
+        <pre>
+          <code>
+{`const [data, setData, reset] = useLocalStorage("local_data", { data: "initData" })`}
+          </code>
+        </pre>
+        <br/>
+        <h3>
+          useStepHandler
+        </h3>
+        <p>
+         Hook to make easy step handling
+        </p>
+        {/*<span>{isFocused ? "Focus" : "Blur"}</span>*/}
+        {/*<div style={{ background:"grey" }} id={"focus_area"}>focus area</div>*/}
+        <h4>Examples</h4>
+        <pre>
+          <code>
+{`const [data, setData, reset] = useLocalStorage("local_data", { data: "initData" })`}
+          </code>
+        </pre>
+
 
       </section>
-
       <footer>
         <p>
           Made by <a href={authorUrl}>{ authorName }</a>
