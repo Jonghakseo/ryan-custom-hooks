@@ -6,7 +6,7 @@ Can be used with typescript.
 
 ## 🚀 Getting Started
 
-[ALL](https://github.com/Jonghakseo/ryan-custom-hooks/tree/master/example/index.html)
+[ALL](https://rawcdn.githack.com/Jonghakseo/ryan-custom-hooks/1aef8fd4f374b8857ec79460e53d538d61160ba1/ryan-custom-hooks/example/index.html)
 
 ### useToggle
 
