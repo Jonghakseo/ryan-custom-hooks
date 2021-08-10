@@ -4,7 +4,7 @@ declare interface ToggleHandler {
     on: () => void;
     off: () => void;
 }
-declare function useToggle(defaultValue?: boolean):[boolean, () => void & ToggleHandler]
+declare function useToggle(defaultValue?: boolean):[boolean, (() => void ) & ToggleHandler]
 declare function useMountFocus(refOrId: React.MutableRefObject<any> | string):void
 declare function useFocusBlur(refOrId: React.MutableRefObject<any> | string, defaultFocusState?:boolean):boolean
 declare function useDidMount(cb?: (p?:any)=>any):void

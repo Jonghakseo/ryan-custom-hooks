@@ -34,7 +34,7 @@ Can be used with Typescript.
 
 ### useStepHandler
 
-[Example] `Preparing`
+[Example](https://codesandbox.io/s/usestephandler-p2j8j?file=/src/App.js)
 
 ---
 ## History
