@@ -1,8 +1,8 @@
 # 🧰 ryan-custom-hooks
 
-A simple React Hooks made by Ryan.
+A Simple React Hooks made by Ryan.
 
-Can be used with typescript.
+Can be used with Typescript.
 
 ## 🚀 Getting Started
 
@@ -30,11 +30,11 @@ Can be used with typescript.
 
 ### useLocalStorage
 
-[Example] Preparing
+[Example] `Preparing`
 
 ### useStepHandler
 
-[Example] Preparing
+[Example] `Preparing`
 
 ---
 ## History

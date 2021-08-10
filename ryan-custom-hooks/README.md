@@ -1,12 +1,12 @@
 # 🧰 ryan-custom-hooks
 
-A simple React Hooks made by Ryan.
+A Simple React Hooks made by Ryan.
 
-Can be used with typescript.
+Can be used with Typescript.
 
 ## 🚀 Getting Started
 
-[ALL](https://github.com/Jonghakseo/ryan-custom-hooks/tree/master/example/index.html)
+[ALL](https://rawcdn.githack.com/Jonghakseo/ryan-custom-hooks/1aef8fd4f374b8857ec79460e53d538d61160ba1/ryan-custom-hooks/example/index.html)
 
 ### useToggle
 
@@ -30,11 +30,11 @@ Can be used with typescript.
 
 ### useLocalStorage
 
-[Example] Preparing
+[Example] `Preparing`
 
 ### useStepHandler
 
-[Example] Preparing
+[Example] `Preparing`
 
 ---
 ## History
