@@ -39,7 +39,7 @@ export default function Index() {
   ]
 
   const [handler, render] = useStepHandler(steps, 1)
-  console.log(handler.now,render())
+
   return (
     <main>
       <style jsx global>{`
@@ -249,7 +249,10 @@ useFocusBlur("focus_area") // or targetRef
         <h4>Examples</h4>
         <pre>
           <code>
-{`const [data, setData, reset] = useLocalStorage("local_data", { data: "initData" })`}
+{`const [data, setData, reset] = useLocalStorage("view_count", 1)
+
+useDidMount(() => { setData(data + 1) });
+`}
           </code>
         </pre>
         <br/>
@@ -264,7 +267,20 @@ useFocusBlur("focus_area") // or targetRef
         <h4>Examples</h4>
         <pre>
           <code>
-{`const [data, setData, reset] = useLocalStorage("local_data", { data: "initData" })`}
+{`
+  const steps = [
+    {key: 1, value: <div>1</div>},
+    {key: 2, value: <div>2</div>},
+    {key: 3, value: <div>3</div>}
+  ]
+
+  const [handler, renderByStep] = useStepHandler(steps, 1);
+  const { now, set, next, prev } = handler;
+  
+  
+  return <>{renderByStep()}</>
+ 
+`}
           </code>
         </pre>
 
